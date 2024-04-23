@@ -1,0 +1,40 @@
+combinators = explains the relationship between listed selectors
+ = descendant
+> = child
+~ = general sibling
++ = adjacent sibling
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<link rel="stylesheet" href="style.css">
+
+<div id="container">
+	<p>This is #1</p>
+	<p>This is #2</p>
+	<div>
+		<p>This is #3</p>
+	</div>
+</div>
+
+<p>This is #4</p>
+<p>This is #5</p>
+
+</body>
+</html>
+
+style.css
+
+#container{
+    border: 2px solid
+}
+#container >p{
+    background-color: blueviolet;
+}
+#container ~p{
+    background-color: rgb(141, 226, 43);
+}
+#container +p{
+    background-color: rgb(50, 180, 255);
+}
